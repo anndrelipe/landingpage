@@ -16,6 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #navBarChild {
@@ -65,8 +66,7 @@ body {
     color: rgb(76,76,88);
     cursor: pointer;
 } 
-
-select {
+.navItemsChild_ select{
     color: rgb(76,76,88);
     border-style: none;
 }
@@ -81,9 +81,9 @@ select {
     color: white;
 }
 
-select:hover {
-    color: white;
+.navItemsChild_ select:hover {
     background-color: transparent;
+    color: white;
 }
 
 .quoteButtomChild_ button{
@@ -101,10 +101,196 @@ select:hover {
     text-decoration: none;
     font-family: 'Lexend Deca', sans-serif;
     color: white;
-    font-weight: normal;
     font-weight: 300;
+    transition: 0.2s;
+}
+
+.quoteButtomChild_ button a:hover{
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 .quoteButtomChild_{
     margin-right: -130px;
 }
+
+#overlayChild {
+    overflow: hidden;
+    height: 350px;
+    width: 100%;
+    background:url(src/08470238-4318-4191-84ab-37f667789bcd.jpg);
+    background-attachment:scroll;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay {
+    height: 350px;
+    width: 100%;
+    background-color: rgb(0,0,0,0.9);
+    opacity: 0.7;
+}
+
+#trackingBar {
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#trackingBar h2{
+    color: rgb(255, 72, 0);
+}
+
+#trackingBar h1{
+    color: white;
+    font-size: 40px
+}
+
+#mainTrackBar {
+
+    height: 40px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainTrackBar input {
+    height: 40px;
+    font-size: 12px;
+    width: 220px;
+    outline: none;
+    border: none;
+}
+
+#mainTrackBar button {
+    background-color: rgb(255, 72, 0);
+    color: white;
+    font-size: 12px;
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#mainTrackBar button:hover {    
+    font-weight: 600;
+    background-color: rgb(213, 68, 11);
+}
+
+#paddingGetAQuote {
+    padding-top: 30px;
+    width: 100%;
+}
+
+#getAQuoteChild {
+    background-color: rgb(242,242,244);
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#getAQuoteCard {
+    display: flex;
+    justify-content: space-around;
+    width: 840px;
+}
+#mainGetAQuoteText {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 520px;
+    font-family: 'Lexend Deca', sans-serif;
+    justify-content: center;
+}
+
+#getAQuoteText {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lexend Deca', sans-serif;
+    justify-content: center;
+}
+
+#gridText {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#getAQuoteText h3{
+    color: rgb(255, 72, 0);
+    font-size: 12px;
+}
+
+#getAQuoteText h2{
+    color: #1F1F2E;
+}
+
+#getAQuoteText p{
+    color: rgb(76,76,88);
+    font-size: 12px;
+}
+
+#gridText h2 {
+    color: rgb(255, 72, 0);
+    font-size: 25px;
+}
+
+#gridText h4 {
+    font-size: 12px;
+}
+
+#getAQuoteForm {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    width: 320px;
+    background-color:  rgb(255, 72, 0);
+}
+
+#getAQuoteForm input{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    width: 260px;
+    height: 30px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#getAQuoteForm select{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    width: 260px;
+    height: 30px;
+    border: none;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#getAQuoteForm button{
+    font-family: 'Lexend Deca', sans-serif;
+    width: 260px;
+    height: 40px;
+    border: none;
+    background-color: #1F1F2E;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#getAQuoteForm button:hover{
+    text-decoration: underline;
+    font-weight: 600;
+}   
