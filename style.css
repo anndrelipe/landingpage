@@ -294,3 +294,30 @@ body {
     text-decoration: underline;
     font-weight: 600;
 }   
+
+#pricinPlanContainer {
+    background-color: red;
+    width: 100%;
+    height: 450px;
+}
+
+#pricinPlanChild {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+#pricinPlanGrid {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+}
+
+.boxgrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
