@@ -296,9 +296,14 @@ body {
 }   
 
 #pricinPlanContainer {
-    background-color: red;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: white;
     width: 100%;
-    height: 450px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #pricinPlanChild {
@@ -313,11 +318,78 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 850px;
+    width: 980px;
 }
 
 .boxgrid {
+    background-color: rgb(242,242,244);
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 320px ;
+    height: 420px
+}
+
+.typePlan{
+    width: 320px;
+    height: 50px;
+    background-color: rgb(255, 72, 0);
+    color:#1F1F2E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ppc {
+    color: rgb(255, 72, 0);
+    font-size: 13px;
+}
+
+#afpp {
+    color:#1F1F2E;
+}
+
+.pricePlan {
+    color:#1F1F2E;
+    height: 70px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutPlan {
+    color: rgb(76,76,88);;
+    font-size: smaller;
+    font-weight:300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buttonPlan {
+    margin-top: 5px;
+    width: 130px;
+    height: 35px;
+    background-color: rgb(255, 72, 0);
+    border-style: none;
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    font-weight: normal;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.buttonPlan  a{
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    font-weight: 300;
+    transition: 0.2s;
+}
+.buttonPlan  a:hover{
+    text-decoration: underline;
+    font-weight: 600;
 }
