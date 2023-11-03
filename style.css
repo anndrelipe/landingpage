@@ -1,57 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Gabarito:wght@400;600&family=Lexend+Deca:wght@100;200;300;400;600;800&display=swap');
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #f9f9f9;
 }
 
 #container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 #navBarChild {
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    width: 100rem;
-    height: 70px;
-    background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 0px 10px;
 }
 
 .logoChild_ {
-    margin-left: -100px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 32px;
-    font-weight: bolder;
-    font-family: 'Lexend Deca', sans-serif;
-    color: rgb(255, 72, 0);
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: rgb(255, 72, 0);
 }
 
 .logoChild_ img {
-    margin-right: 10px;
-    width: 50px;
-    height: 50px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 .navItemsChild_ ul {
-    list-style: none;
-    margin: 10px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navItemsChild_ ul li {
+  margin-right: 20px;
+}
 
 .navItemsChild_ ul li button{
     align-self: center;
@@ -81,28 +77,19 @@ body {
     color: white;
 }
 
-.navItemsChild_ select:hover {
-    background-color: transparent;
-    color: white;
+.quoteButtomChild_ button {
+  padding: 10px 20px;
+  background-color: rgb(255, 72, 0);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s;
 }
 
-.quoteButtomChild_ button{
-    width: 130px;
-    height: 35px;
-    background-color: rgb(255, 72, 0);
-    border-style: none;
-    font-family: 'Lexend Deca', sans-serif;
-    color: white;
-    font-weight: normal;
-    font-weight: 300;
-}
-
-.quoteButtomChild_ button a{
-    text-decoration: none;
-    font-family: 'Lexend Deca', sans-serif;
-    color: white;
-    font-weight: 300;
-    transition: 0.2s;
+.quoteButtomChild_ button a {
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
 }
 
 .quoteButtomChild_ button a:hover{
@@ -110,9 +97,95 @@ body {
     font-weight: 600;
 }
 
-.quoteButtomChild_{
-    margin-right: -130px;
+#overlayChild {
+  position: relative;
+  height: 300px;
+  background: url(src/08470238-4318-4191-84ab-37f667789bcd.jpg) center/cover no-repeat;
 }
+
+#overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#trackingBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#trackingBar h2 {
+  color: rgb(255, 72, 0);
+}
+
+#trackingBar h1 {
+  color: white;
+  font-size: 24px;
+}
+
+#mainTrackBar {
+  display: flex;
+}
+
+#mainTrackBar input {
+  height: 40px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#mainTrackBar button {
+    background-color: rgb(255, 72, 0);
+    color: white;
+    font-size: 12px;
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#mainTrackBar button:hover {    
+    font-weight: 600;
+    background-color: rgb(213, 68, 11);
+}
+
+@media (max-width: 768px) {
+  #navBarChild {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .navItemsChild_ ul {
+      margin-top: 10px;
+  }
+
+  .navItemsChild_ ul li {
+      margin: 5px 0;
+  }
+
+  #quoteButtomChild_ {
+      margin: 20px 0;
+  }
+}
+
+.quoteButtomChild_ button a:hover{
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 
 #overlayChild {
     overflow: hidden;
@@ -151,7 +224,7 @@ body {
     font-size: 40px
 }
 
-#mainTrackBar {
+.mainTrackBar {
 
     height: 40px;
     width: 320px;
@@ -159,7 +232,7 @@ body {
     justify-content: space-between;
 }
 
-#mainTrackBar input {
+.mainTrackBar input {
     height: 40px;
     font-size: 12px;
     width: 220px;
@@ -167,7 +240,7 @@ body {
     border: none;
 }
 
-#mainTrackBar button {
+.mainTrackBar button {
     background-color: rgb(255, 72, 0);
     color: white;
     font-size: 12px;
@@ -179,7 +252,7 @@ body {
     cursor: pointer;
 }
 
-#mainTrackBar button:hover {    
+.mainTrackBar button:hover {    
     font-weight: 600;
     background-color: rgb(213, 68, 11);
 }
@@ -467,4 +540,240 @@ body {
     width: 100%;
     height: 0.5em;
     background-color: rgb(255, 72, 0);
+}
+
+
+#latestBlogContainer {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: white;
+    width: 100%;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#latestBlogChild {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+#latestBlogGrid {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 980px;
+}
+
+.lboxgrid {
+    background-color: rgb(242,242,244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 480px ;
+    height: 440px
+}
+
+#oub {
+    color: rgb(255, 72, 0);
+    font-size: 13px;
+}
+
+#lfb {
+    color:#1F1F2E;
+}
+
+.profileInfo {
+    display: flex;
+    margin-left: 3%;
+    margin-top: 2%;
+    justify-content:space-between;
+    width: 50%;
+}
+.profileInfo p{
+    color: rgb(76,76,88);
+    font-size: 14px;
+}
+
+.profileInfo img {
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+}
+.pfI {
+    display: flex;
+    width: 240px;
+    text-align: center;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.pfII {
+    margin-left: 2%;
+    display: flex;
+    width: 240px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pfII p{
+    margin-left: -7%;
+}
+
+.lboxgrid h3 {
+    color:#1F1F2E;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+
+.lboxgrid p {
+    color: rgb(76,76,88);
+    font-size: 14px;
+    margin-left: 4%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.lboxgrid a {
+    margin-left: 4%;
+    color: rgb(255, 72, 0);
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 15px;
+    transition: 1.0s;
+}
+
+.lboxgrid a:hover {
+    font-size: 16px;
+}
+
+.footerContainer {
+    background-color: #1F1F2E;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerFirstChild{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.footertittle {
+    color: rgb(255, 72, 0);
+}
+
+.footerAdresses {
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.footerAdressInfo {
+    display:flex;
+    align-items: center;
+    font-size: 14px;
+    color:rgb(242,242,244);
+}
+
+.footerAdressInfo p {
+    margin-left: 3%;
+}
+
+.footerQuickLinks{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerQuickLinks a{
+    color: rgb(242,242,244);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footerQuickLinks a:hover{
+    text-decoration: underline;
+}
+
+.footerSignUp {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.footerSignUp p{
+    color:rgb(242,242,244);
+    font-size: 13px;
+}
+
+.mainSignUpBar {
+    height: 40px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainSignUpBar input {
+    height: 40px;
+    font-size: 12px;
+    width: 380px;
+    outline: none;
+    border: none;
+}
+
+.mainSignUpBar button {
+    background-color: rgb(255, 72, 0);
+    color: rgb(242,242,244);
+    font-size: 12px;
+    height: 40px;
+    width: 70px;
+    outline: none;
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.mainSignUpBar button:hover {    
+    font-weight: 600;
+    background-color: rgb(213, 68, 11);
+}
+
+.footerAdressSocialMedia {
+    width: 20%;
+    display: flex;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerAdressSocialMedia i{
+    cursor: pointer;
+}
+
+.footerGuideLinks {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 2%;
+}
+
+.footerGuideLinks a{
+    color: white;
+    text-decoration: none;
+    margin-right: 3%;
+    font-size: 14px;
+}
+
+.footerGuideLinks a:hover{
+    text-decoration: underline;
 }
